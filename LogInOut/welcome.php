@@ -15,11 +15,11 @@
     $password = $_GET['password'];
     ?>
     
-    <?php if ($username == 'arkar' && $password == 'password') : ?>
+    <?php if (strtoupper($username) == 'ARKAR' && $password == 'password') : ?>
         <div class="container">
             <div style="height:250px;"></div>
 
-            <h1 class="h1 text-center">WELCOME! </h1>
+            <h1 class="h1 text-center">WELCOME <?= strtoupper($username) ?>! </h1>
         </div>
     <?php else : ?>
         <?php header('location:./index.php?incorrect=1'); ?>
